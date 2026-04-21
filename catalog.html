@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>Волшебная страна игрушек - каталог</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <ul>
+        <li><a href="index.html">Главная страница</a></li>
+        <li><a href="catalog.html">Каталог</a></li>
+    </ul>
+    <hr>
+
+    <h1>Каталог игрушек</h1>
+
+    <div class="filters">
+        <button class="filter-btn" data-filter="all">Все</button>
+        <button class="filter-btn" data-filter="dolls">Куклы</button>
+        <button class="filter-btn" data-filter="cars">Машинки</button>
+        <button class="filter-btn" data-filter="soft">Мягкие игрушки</button>
+    </div>
+
+    <div id="products-container"></div>
+
+    <hr>
+
+    <h2>Корзина</h2>
+    <div id="cart-items">
+        <p>Корзина пуста</p>
+    </div>
+    <p><strong>Итого: <span id="cart-total">0</span> руб.</strong></p>
+    <button id="clear-cart-btn">Очистить корзину</button>
+    <button id="checkout-btn">Оплатить</button>
+
+    <hr>
+    <p>&copy; Все права защищены</p>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,131 @@
+body {
+    background-color: rgb(255, 245, 255);
+}
+
+ul {
+    list-style-type: none;
+}
+
+ul a {
+    color: purple;
+    font-size: 20px;
+    font-style: italic;
+    font-variant: normal;
+    font-weight: bold;
+}
+
+h2 {
+    color: black;
+    font-size: 18px;
+    font-weight: 400;
+    background-color: rgb(255, 192, 203);
+}
+
+.short-description {
+    color: rgb(255, 0, 0);
+    font-size: 14px;
+    font-style: italic;
+    line-height: 16px;
+}
+
+.full-description {
+    color: rgb(100, 0, 0);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+}
+
+.characteristics {
+    color: rgb(100, 100, 100);
+    font-size: 15px;
+    font-weight: normal;
+    font-style: normal;
+    line-height: 1.5;
+    list-style-image: url(images/marker.jpeg);
+}
+
+.product-card {
+    display: inline-block;
+    width: 200px;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: center;
+    vertical-align: top;
+}
+
+.product-card img {
+    display: block;
+    margin: 0 auto;
+}
+
+.price {
+    font-weight: bold;
+    color: purple;
+}
+
+.filters {
+    margin: 20px 0;
+}
+
+.filter-btn {
+    margin: 5px;
+    padding: 8px 15px;
+    background-color: rgb(255, 192, 203);
+    border: none;
+    cursor: pointer;
+}
+
+.filter-btn:hover {
+    background-color: rgb(255, 150, 180);
+}
+
+.add-to-cart-btn {
+    margin-top: 10px;
+    padding: 5px 10px;
+    background-color: purple;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.cart-list {
+    list-style: none;
+    padding: 0;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5px 0;
+    padding: 5px;
+    border-bottom: 1px solid #ccc;
+}
+
+.remove-from-cart {
+    background-color: red;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 3px 8px;
+}
+
+#clear-cart-btn, #checkout-btn {
+    margin: 10px 5px;
+    padding: 8px 15px;
+    cursor: pointer;
+}
+
+#clear-cart-btn {
+    background-color: gray;
+    color: white;
+    border: none;
+}
+
+#checkout-btn {
+    background-color: green;
+    color: white;
+    border: none;
+}
