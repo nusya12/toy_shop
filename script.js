@@ -35,6 +35,18 @@ const calculateTotal = () => {
     return total;
 };
 
+const saveCartToLocalStorage = () => {
+    localStorage.setItem("cart", JSON.stringify(cart));
+};
+
+const loadCartFromLocalStorage = () => {
+    const savedCart = localStorage.getItem("cart");
+    if (savedCart) {
+        cart = JSON.parse(savedCart);
+        renderCart();
+    }
+};
+
 const renderCart = () => {
     const cartItemsDiv = document.getElementById("cart-items");
     const cartTotalSpan = document.getElementById("cart-total");
@@ -68,6 +80,7 @@ const renderCart = () => {
             const index = parseInt(btn.dataset.index);
             cart.splice(index, 1);
             renderCart();
+            saveCartToLocalStorage();
         });
     });
 };
@@ -81,6 +94,7 @@ const addToCart = (productId) => {
             price: product.price
         });
         renderCart();
+        saveCartToLocalStorage();
         alert(`Товар "${product.name}" добавлен в корзину!`);
     }
 };
@@ -88,6 +102,7 @@ const addToCart = (productId) => {
 const clearCart = () => {
     cart = [];
     renderCart();
+    saveCartToLocalStorage();
 };
 
 const checkout = () => {
@@ -140,6 +155,7 @@ const loadProductsToCatalog = () => {
 
 document.addEventListener("DOMContentLoaded", () => {
     loadProductsToCatalog();
+    loadCartFromLocalStorage();
     
     const filterButtons = document.querySelectorAll(".filter-btn");
     filterButtons.forEach(btn => {
